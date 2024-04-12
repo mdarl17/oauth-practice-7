@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "home#index"
+  get "/auth/github/callback", to: "sessions#create"
+  get "/dashboard", to: "dashboard#show"
 end
